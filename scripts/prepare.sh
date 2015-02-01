@@ -2,7 +2,9 @@
 
 . ./common.sh --source-only
 
-. env/bin/activate
+cd ../
+source env/bin/activate
+cd -
 
 stage "Build projects"
 
@@ -36,5 +38,5 @@ substage "Build knowledge base"
 
 substage "services"
 sudo python services.py $USER
-sudo start scweb
-sudo start sctp
+sudo restart scweb
+sudo restart sctp
