@@ -5,6 +5,9 @@
 cd ..
 
 stage "Configure virtual environment"
+sudo apt-get install python-pip python-dev build-essential
+sudo pip install --upgrade pip
+sudo pip install --upgrade virtualenv
 
 substage "Create"
 virtualenv --prompt="ims.env" ./env
